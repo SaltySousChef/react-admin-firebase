@@ -1,7 +1,11 @@
 {
-  "name": "react-admin-firebase",
+  "name": "@igoratron/react-admin-firebase",
   "description": "A firebase data provider for the React Admin framework",
-  "version": "3.2.16",
+  "version": "3.3.0",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/igoratron/react-admin-firebase.git"
+  },
   "peerDependencies": {
     "firebase": "^8.10",
     "react": "^17.x",
@@ -60,5 +64,12 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "umd:main": "dist/index.umd.js",
-  "source": "src/index.ts"
+  "source": "src/index.ts",
+  "bugs": {
+    "url": "https://github.com/igoratron/react-admin-firebase/issues"
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "author": ""
 }
