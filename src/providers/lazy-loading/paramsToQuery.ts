@@ -51,7 +51,13 @@ export function filtersToQuery(
   filters: { [fieldName: string]: any }
 ): Query {
   Object.keys(filters).forEach((fieldName) => {
-    query = query.where(fieldName, '==', filters[fieldName]);
+    if (fieldName.includes('_gte')) {
+      query = query.where(fieldName.split('_gte')[0], '>=', filters[fieldName]);
+    } else if (fieldName.includes('_lte')) {
+      query = query.where(fieldName.split('_lte')[0], '<=', filters[fieldName]);
+    } else {
+      query = query.where(fieldName, '==', filters[fieldName]);
+    }
   });
   return query;
 }
